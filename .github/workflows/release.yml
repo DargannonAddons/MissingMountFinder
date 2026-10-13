@@ -1,0 +1,28 @@
+name: CurseForge Release
+
+on:
+  workflow_dispatch:
+  push:
+    tags:
+      - 'v*'
+
+jobs:
+  build-and-zip:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Zip addon into a MissingMountFinder folder (no .git, .github, etc)
+        run: |
+          mkdir -p build/MissingMountFinder
+          cp *.toc *.lua build/MissingMountFinder/
+          cp README.md build/MissingMountFinder/ 2>/dev/null || true
+          cd build
+          zip -r ../MissingMountFinder.zip MissingMountFinder
+
+      - name: Upload zip artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: MissingMountFinder-release
+          path: MissingMountFinder.zip

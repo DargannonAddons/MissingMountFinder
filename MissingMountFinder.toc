@@ -1,0 +1,21 @@
+## Interface: 120100, 120001
+## Title: MissingMountFinder
+## Notes: Tracks missing mounts, checks your requirements for each one, and tells you how to get them
+## Author: tglass1976
+## Version: 1.0.0
+## SavedVariables: MissingMountFinderDB
+## OptionalDeps: AllTheThings
+## IconTexture: Interface\Icons\Ability_Mount_RidingHorse
+## AddonCompartmentFunc: MissingMountFinder_OnAddonCompartmentClick
+## AddonCompartmentFuncOnEnter: MissingMountFinder_OnAddonCompartmentEnter
+## AddonCompartmentFuncOnLeave: MissingMountFinder_OnAddonCompartmentLeave
+
+MissingMountFinder.lua
+MissingMountFinderLocalization.lua
+MissingMountFinderZones.lua
+MissingMountFinderSources.lua
+MissingMountFinderRequirements.lua
+MissingMountFinderATT.lua
+MissingMountFinderData.lua
+MissingMountFinderUI.lua
+MissingMountFinderInit.lua
